@@ -10,7 +10,7 @@ import UIKit
 
 final class PhonecardAssembly {
   func build() -> (controller: UIViewController, presenter: PhonecardPresenterInputProtocol)? {
-    guard let viewController = PhonecardViewController.instantiateFromStoryboard(with: .phonecard) else {return nil}
+    guard let viewController = PhonecardViewController.instantiateFromStoryboard(with: .phonecard) else { return nil }
     let presenter = PhonecardPresenter()
     let interactor = PhonecardInteractor()
     viewController.output = presenter

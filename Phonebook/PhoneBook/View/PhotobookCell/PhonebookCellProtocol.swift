@@ -8,9 +8,10 @@
 
 import UIKit
 
-protocol PhotobookCellModel {
+protocol PhonebookCellProtocol {
   var firstName: String {get}
   var patronymic: String {get}
   var lastName: String {get}
-  var photo: UIImage {get set}
+  var photoUrl: String {get}
+  func getFullName() -> String
 }

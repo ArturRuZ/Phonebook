@@ -10,9 +10,11 @@ import UIKit
 
 protocol PhonebookObjectProtocol: class {
   var firstName: String {get}
+  var patronymic: String {get}
   var lastName: String {get}
   var email: String {get}
   var phone: String {get}
-  var smallPhoto: UIImage {get}
-  var largePhoto: UIImage {get}
+  var smallPhotoUrl: String {get}
+  var largePhotoUrl: String {get}
+  func getFullName() -> String 
 }

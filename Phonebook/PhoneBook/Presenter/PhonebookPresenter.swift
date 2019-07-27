@@ -17,7 +17,7 @@ final class PhonebookPresenter {
   private var interactor: PhonebookInteractorInputProtocol!
 }
 
-// MARK: - Phonebook_PresenterInputProtocol implementation
+// MARK: - PhonebookPresenterInputProtocol implementation
 
 extension PhonebookPresenter: PhonebookPresenterInputProtocol {
   var delegate: PhonebookPresenterDelegateProtocol {
@@ -46,12 +46,24 @@ extension PhonebookPresenter: PhonebookPresenterInputProtocol {
   }
 }
 
-// MARK: - Phonebook_ViewOutputProtocol implementation
+// MARK: - PhonebookViewOutputProtocol implementation
 
 extension PhonebookPresenter: PhonebookViewOutputProtocol {
+  func viewDidLoad() {
+    self.interactor.downloadPhonebook()
+  }
+  func textInputInSearchBar(textForSearch: String) {
+    self.interactor.findBy(textForSearch)
+  }
+  func  searchingEnding() {
+    self.interactor.endSearch()
+  }
 }
 
-// MARK: - Phonebook_InteractorOutputProtocol implementation
+// MARK: - PhonebookInteractorOutputProtocol implementation
 
 extension PhonebookPresenter: PhonebookInteractorOutputProtocol {
+  func prepare(phonebook: [PhonebookObjectProtocol]) {
+  self.view.show(phonebook: phonebook)
+  }
 }

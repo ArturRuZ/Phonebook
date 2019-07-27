@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348E9A4622EC772000258573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348E9A4522EC771F00258573 /* Assets.xcassets */; };
+		348E9A4922EC9A1100258573 /* UIimageViewDownloadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A4822EC9A1100258573 /* UIimageViewDownloadExtension.swift */; };
+		348E9A4C22ECC5DB00258573 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A4B22ECC5DB00258573 /* SearchService.swift */; };
+		348E9A4E22ECC67100258573 /* SearchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A4D22ECC67100258573 /* SearchOperation.swift */; };
+		348E9A5022ECCB2D00258573 /* SearchServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A4F22ECCB2D00258573 /* SearchServiceProtocol.swift */; };
 		34D7C0B722EB7A610042DB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C0B622EB7A610042DB19 /* AppDelegate.swift */; };
-		34D7C0BE22EB7A630042DB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C0BD22EB7A630042DB19 /* Assets.xcassets */; };
 		34D7C0C122EB7A630042DB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C0BF22EB7A630042DB19 /* LaunchScreen.storyboard */; };
 		34D7C0DC22EB7CC30042DB19 /* PhonebookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C0DB22EB7CC30042DB19 /* PhonebookInteractor.swift */; };
 		34D7C0DE22EB7CE10042DB19 /* PhonebookAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C0DD22EB7CE10042DB19 /* PhonebookAssembly.swift */; };
@@ -29,8 +33,8 @@
 		34D7C10222EB86710042DB19 /* PhonebookObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C10122EB86710042DB19 /* PhonebookObjectProtocol.swift */; };
 		34D7C10522EB88710042DB19 /* Phonebook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C10422EB88710042DB19 /* Phonebook.storyboard */; };
 		34D7C10822EB891C0042DB19 /* PhonebookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C10722EB891C0042DB19 /* PhonebookCell.xib */; };
-		34D7C10A22EB89FC0042DB19 /* PhotobookCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C10922EB89FC0042DB19 /* PhotobookCellModel.swift */; };
-		34D7C10C22EB8A130042DB19 /* PhotobookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C10B22EB8A130042DB19 /* PhotobookCellView.swift */; };
+		34D7C10A22EB89FC0042DB19 /* PhonebookCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C10922EB89FC0042DB19 /* PhonebookCellProtocol.swift */; };
+		34D7C10C22EB8A130042DB19 /* PhonebookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C10B22EB8A130042DB19 /* PhonebookCellView.swift */; };
 		34D7C11022EB8C2A0042DB19 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C10F22EB8C2A0042DB19 /* Application.swift */; };
 		34D7C11522EB8CFD0042DB19 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C11422EB8CFD0042DB19 /* Coordinator.swift */; };
 		34D7C11722EB8D040042DB19 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C11622EB8D040042DB19 /* CoordinatorProtocol.swift */; };
@@ -55,9 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		348E9A4522EC771F00258573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		348E9A4822EC9A1100258573 /* UIimageViewDownloadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageViewDownloadExtension.swift; sourceTree = "<group>"; };
+		348E9A4B22ECC5DB00258573 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		348E9A4D22ECC67100258573 /* SearchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperation.swift; sourceTree = "<group>"; };
+		348E9A4F22ECCB2D00258573 /* SearchServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceProtocol.swift; sourceTree = "<group>"; };
 		34D7C0B322EB7A610042DB19 /* Phonebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phonebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D7C0B622EB7A610042DB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34D7C0BD22EB7A630042DB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D7C0C022EB7A630042DB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34D7C0C222EB7A630042DB19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D7C0DB22EB7CC30042DB19 /* PhonebookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookInteractor.swift; sourceTree = "<group>"; };
@@ -79,8 +87,8 @@
 		34D7C10122EB86710042DB19 /* PhonebookObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookObjectProtocol.swift; sourceTree = "<group>"; };
 		34D7C10422EB88710042DB19 /* Phonebook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phonebook.storyboard; sourceTree = "<group>"; };
 		34D7C10722EB891C0042DB19 /* PhonebookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhonebookCell.xib; sourceTree = "<group>"; };
-		34D7C10922EB89FC0042DB19 /* PhotobookCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotobookCellModel.swift; sourceTree = "<group>"; };
-		34D7C10B22EB8A130042DB19 /* PhotobookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotobookCellView.swift; sourceTree = "<group>"; };
+		34D7C10922EB89FC0042DB19 /* PhonebookCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookCellProtocol.swift; sourceTree = "<group>"; };
+		34D7C10B22EB8A130042DB19 /* PhonebookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookCellView.swift; sourceTree = "<group>"; };
 		34D7C10F22EB8C2A0042DB19 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		34D7C11422EB8CFD0042DB19 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		34D7C11622EB8D040042DB19 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -115,6 +123,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		348E9A4A22ECC5C900258573 /* SearchService */ = {
+			isa = PBXGroup;
+			children = (
+				348E9A4B22ECC5DB00258573 /* SearchService.swift */,
+				348E9A4F22ECCB2D00258573 /* SearchServiceProtocol.swift */,
+				348E9A4D22ECC67100258573 /* SearchOperation.swift */,
+			);
+			path = SearchService;
+			sourceTree = "<group>";
+		};
 		34D7C0AA22EB7A610042DB19 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +152,7 @@
 		34D7C0B522EB7A610042DB19 /* Phonebook */ = {
 			isa = PBXGroup;
 			children = (
+				348E9A4522EC771F00258573 /* Assets.xcassets */,
 				34D7C11322EB8CCE0042DB19 /* Coordinator */,
 				34D7C0FB22EB84EA0042DB19 /* App */,
 				34D7C0EE22EB7ED40042DB19 /* Common */,
@@ -141,7 +160,6 @@
 				34D7C0C822EB7A6F0042DB19 /* PhoneBook */,
 				34D7C0C922EB7A7F0042DB19 /* PhoneCard */,
 				34D7C10322EB87F70042DB19 /* DetailPhoto */,
-				34D7C0BD22EB7A630042DB19 /* Assets.xcassets */,
 				34D7C0BF22EB7A630042DB19 /* LaunchScreen.storyboard */,
 				34D7C0C222EB7A630042DB19 /* Info.plist */,
 			);
@@ -212,6 +230,7 @@
 		34D7C0E722EB7E3B0042DB19 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				348E9A4A22ECC5C900258573 /* SearchService */,
 				34D7C11D22EB8DD40042DB19 /* InternetService */,
 				34D7C11C22EB8DCC0042DB19 /* ControllerBuilder */,
 			);
@@ -225,6 +244,7 @@
 				34D7C0F322EB80140042DB19 /* StoryboardName.swift */,
 				34D7C0F522EB80780042DB19 /* UIViewControllerStoryboardID.swift */,
 				34D7C0F722EB80AF0042DB19 /* ErrorList.swift */,
+				348E9A4822EC9A1100258573 /* UIimageViewDownloadExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -264,8 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				34D7C10722EB891C0042DB19 /* PhonebookCell.xib */,
-				34D7C10922EB89FC0042DB19 /* PhotobookCellModel.swift */,
-				34D7C10B22EB8A130042DB19 /* PhotobookCellView.swift */,
+				34D7C10922EB89FC0042DB19 /* PhonebookCellProtocol.swift */,
+				34D7C10B22EB8A130042DB19 /* PhonebookCellView.swift */,
 			);
 			path = PhotobookCell;
 			sourceTree = "<group>";
@@ -445,8 +465,8 @@
 				34D7C14522EB96E70042DB19 /* Phonecard.storyboard in Resources */,
 				34D7C10522EB88710042DB19 /* Phonebook.storyboard in Resources */,
 				34D7C0C122EB7A630042DB19 /* LaunchScreen.storyboard in Resources */,
-				34D7C0BE22EB7A630042DB19 /* Assets.xcassets in Resources */,
 				34D7C14722EB96FE0042DB19 /* DetailPhoto.storyboard in Resources */,
+				348E9A4622EC772000258573 /* Assets.xcassets in Resources */,
 				34D7C10822EB891C0042DB19 /* PhonebookCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,11 +487,13 @@
 				34D7C0F822EB80AF0042DB19 /* ErrorList.swift in Sources */,
 				34D7C11922EB8DBA0042DB19 /* ControllerBuilder.swift in Sources */,
 				34D7C0E922EB7E560042DB19 /* InternetService.swift in Sources */,
+				348E9A4E22ECC67100258573 /* SearchOperation.swift in Sources */,
 				34D7C10222EB86710042DB19 /* PhonebookObjectProtocol.swift in Sources */,
 				34D7C10022EB86440042DB19 /* PhonebookObject.swift in Sources */,
 				34D7C0E022EB7CFF0042DB19 /* PhonebookPresenter.swift in Sources */,
 				34D7C0ED22EB7E780042DB19 /* DownloadOperation.swift in Sources */,
 				34D7C0E222EB7D0D0042DB19 /* PhonebookPresenterProtocol.swift in Sources */,
+				348E9A5022ECCB2D00258573 /* SearchServiceProtocol.swift in Sources */,
 				34D7C12E22EB92D80042DB19 /*  DetailPhotoViewProtocol.swift in Sources */,
 				34D7C11B22EB8DC80042DB19 /* ControllerBuilderProtocol.swift in Sources */,
 				34D7C0DE22EB7CE10042DB19 /* PhonebookAssembly.swift in Sources */,
@@ -480,10 +502,11 @@
 				34D7C11022EB8C2A0042DB19 /* Application.swift in Sources */,
 				34D7C13D22EB955E0042DB19 /* PhonecardViewController.swift in Sources */,
 				34D7C13F22EB955E0042DB19 /* PhonecardPresenter.swift in Sources */,
-				34D7C10C22EB8A130042DB19 /* PhotobookCellView.swift in Sources */,
+				34D7C10C22EB8A130042DB19 /* PhonebookCellView.swift in Sources */,
 				34D7C0E622EB7DD30042DB19 /* PhonebookInteractorProtocol.swift in Sources */,
-				34D7C10A22EB89FC0042DB19 /* PhotobookCellModel.swift in Sources */,
+				34D7C10A22EB89FC0042DB19 /* PhonebookCellProtocol.swift in Sources */,
 				34D7C12822EB926C0042DB19 /* DetailPhotoPresenter.swift in Sources */,
+				348E9A4C22ECC5DB00258573 /* SearchService.swift in Sources */,
 				34D7C13022EB93110042DB19 /* DetailPhotoViewController.swift in Sources */,
 				34D7C0F622EB80780042DB19 /* UIViewControllerStoryboardID.swift in Sources */,
 				34D7C14022EB955E0042DB19 /* PhonecardPresenterProtocol.swift in Sources */,
@@ -496,6 +519,7 @@
 				34D7C12A22EB926C0042DB19 /* DetailPhotoInteractorProtocol.swift in Sources */,
 				34D7C13E22EB955E0042DB19 /* PhonecardViewProtocol.swift in Sources */,
 				34D7C0F422EB80140042DB19 /* StoryboardName.swift in Sources */,
+				348E9A4922EC9A1100258573 /* UIimageViewDownloadExtension.swift in Sources */,
 				34D7C0FA22EB818F0042DB19 /* PhonebookViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import UIKit
 
 final class DetailPhotoAssembly {
   func build() -> (controller: UIViewController, presenter: DetailPhotoPresenterInputProtocol)? {
-    guard let viewController = DetailPhotoViewController.instantiateFromStoryboard(with: .detailPhoto) else {return nil}
+    guard let viewController = DetailPhotoViewController.instantiateFromStoryboard(with: .detailPhoto) else { return nil }
     let presenter = DetailPhotoPresenter()
     let interactor = DetailPhotoInteractor()
     viewController.output = presenter

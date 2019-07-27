@@ -14,7 +14,8 @@ final class Application {
   
   private let modulesCoordinator: CoordinatorProtocol = {
     let internetService = InternetService()
-    let controllerBuilder: ControllerBuilderProtocol = ControllerBuilder(internetService: internetService)
+    let searchService = SearchService()
+    let controllerBuilder: ControllerBuilderProtocol = ControllerBuilder(internetService: internetService, searchService: searchService)
     let modulesCoordinator: CoordinatorProtocol = Coordinator(controllerBuilder: controllerBuilder)
     controllerBuilder.cordinator = modulesCoordinator
     return modulesCoordinator

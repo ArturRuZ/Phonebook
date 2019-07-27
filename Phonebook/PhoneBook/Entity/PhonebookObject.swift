@@ -17,19 +17,32 @@ final class PhonebookObject: PhonebookObjectProtocol {
   var lastName: String
   var email: String
   var phone: String
-  var smallPhoto: UIImage
-  var largePhoto: UIImage
+  var smallPhotoUrl: String
+  var largePhotoUrl: String
   
   // MARK: - Init
   
-  init(firstName: String,patronymic: String = "", lastName: String, email: String, phone: String, smallPhoto: UIImage, largePhoto: UIImage) {
+  init(firstName: String,patronymic: String = "", lastName: String, email: String, phone: String, smallPhotoUrl: String, largePhotoUrl: String) {
     self.firstName = firstName
     self.patronymic = patronymic
     self.lastName = lastName
     self.email = email
     self.phone = phone
-    self.smallPhoto = smallPhoto
-    self.largePhoto = largePhoto
+    self.smallPhotoUrl = smallPhotoUrl
+    self.largePhotoUrl = largePhotoUrl
   }
   
+  // MARK: - Methods
+  
+  func getFullName() -> String {
+    return "\(firstName) " + "\(patronymic)" + "\(lastName)"
+  }
+}
+
+// MARK: - PhonebookCellProtocol Implementation
+
+extension PhonebookObject: PhonebookCellProtocol {
+  var photoUrl: String {
+    return self.smallPhotoUrl
+  }
 }

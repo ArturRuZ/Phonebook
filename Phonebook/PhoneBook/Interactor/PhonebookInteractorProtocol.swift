@@ -10,7 +10,12 @@ import Foundation
 
 protocol  PhonebookInteractorInputProtocol: class {
   var output: PhonebookInteractorOutputProtocol {get set}
+  func downloadPhonebook()
+  func findBy(_ fio: String)
+  func endSearch()
 }
 
 protocol  PhonebookInteractorOutputProtocol: class {
+  func prepare(phonebook: [PhonebookObjectProtocol])
 }
+

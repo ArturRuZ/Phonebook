@@ -13,16 +13,29 @@ final class ControllerBuilder {
   // MARK: - Private properties
   
   private let internetService: InternetServiceProtocol
+  private let searchService: SearchServiceProtocol
   private weak var modulesCoordinator: CoordinatorProtocol!
 
   
   // MARK: - Initialization
   
-  init(internetService: InternetServiceProtocol) {
+  init(internetService: InternetServiceProtocol, searchService: SearchServiceProtocol) {
     self.internetService = internetService
+    self.searchService = searchService
   }
   
   // MARK: - Private methods
+  
+  private func createPhonebookController() -> (UIViewController) {
+    let assembly = PhonebookAssembly()
+    guard let phonebookModule = assembly.build(internetService: self.internetService, searchService: self.searchService) else { return UIViewController() }
+    guard let cordinator = modulesCoordinator as? PhonebookPresenterDelegateProtocol else { return UIViewController() }
+    let navigationVC = UINavigationController()
+    phonebookModule.controller.navigationItem.title = "Phonebook"
+    navigationVC.pushViewController(phonebookModule.controller, animated: true)
+    phonebookModule.presenter.delegate = cordinator
+    return navigationVC
+  }
 }
 
 // MARK: - ControllerBuilderProtocol implementation
@@ -38,6 +51,6 @@ extension ControllerBuilder: ControllerBuilderProtocol {
   }
  
   func buildRootController() -> UIViewController {
-   return UIViewController()
+   return createPhonebookController()
   }
 }

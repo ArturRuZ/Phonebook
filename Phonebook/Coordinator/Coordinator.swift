@@ -32,3 +32,9 @@ extension Coordinator: CoordinatorProtocol {
     return rootController
   }
 }
+
+// MARK: - CoordinatorProtocol implementation
+
+extension Coordinator: PhonebookPresenterDelegateProtocol {
+  
+}

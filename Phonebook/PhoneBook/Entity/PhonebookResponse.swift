@@ -12,16 +12,16 @@ struct PhonebookResponse: Codable {
   var results: [Results]
 }
 struct Results: Codable {
-  var name: [Name]
+  var name: Name
   var email: String
   var phone: String
-  var picture: [PhotoUrls]
+  var picture: PhotoUrls
 }
 struct Name: Codable {
-  var last: String
   var first: String
+  var last: String
 }
 struct PhotoUrls: Codable {
   var large: String
-  var thumbnail: String
+  var medium: String
 }

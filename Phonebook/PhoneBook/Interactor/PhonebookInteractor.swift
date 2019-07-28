@@ -6,7 +6,7 @@
 //  Copyright © 2019 Артур. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class PhonebookInteractor {
   
@@ -62,6 +62,11 @@ final class PhonebookInteractor {
     }
     return orderedPile
   }
+  private func createErrorWindow(text: String) -> UIAlertController {
+    let alertController = UIAlertController(title: "Error", message: "\(text)", preferredStyle: .alert)
+    alertController.addAction(UIAlertAction(title: "OK :[", style: .cancel, handler: nil))
+    return alertController
+  }
 }
 
 // MARK: - PhonebookInteractorInputProtocol implementation
@@ -82,11 +87,16 @@ extension PhonebookInteractor: PhonebookInteractorInputProtocol {
       guard let self = self else { return }
       if let error = result.error {
         print (error)
+        let errorWindow = self.createErrorWindow(text: "Internet Problem occured")
+        DispatchQueue.main.async {
+          self.output.prepare(alert: errorWindow)
+        }
         return
       }
       guard let succsses = result.success else { return }
       if succsses.results.count == 0 { return }
       self.currentPhonebook = succsses.results.compactMap({PhonebookObject(firstName: $0.name.first,
+                                                                           patronymic: $0.name.patronymic,
                                                                            lastName: $0.name.last,
                                                                            email: $0.email,
                                                                            phone: $0.phone,
@@ -95,7 +105,7 @@ extension PhonebookInteractor: PhonebookInteractorInputProtocol {
       })
       self.currentPhonebook = self.mergeSort(self.currentPhonebook)
       DispatchQueue.main.async {
-        self.output.prepare(phonebook: self.currentPhonebook)
+        self.output.prepareForShow(phonebook: self.currentPhonebook)
       }
     }
   }
@@ -108,16 +118,16 @@ extension PhonebookInteractor: PhonebookInteractorInputProtocol {
       if let error = result.error {
         print (error)
         DispatchQueue.main.async {
-          self.output.prepare(phonebook: [PhonebookObjectProtocol]())
+          self.output.prepareForShow(phonebook: [PhonebookObjectProtocol]())
         }
       }
       guard let succsses = result.success else {return}
       DispatchQueue.main.async {
-        self.output.prepare(phonebook: succsses)
+        self.output.prepareForShow(phonebook: succsses)
       }
     }
   }
   func endSearch() {
-    self.output.prepare(phonebook: currentPhonebook)
+    self.output.prepareForShow(phonebook: currentPhonebook)
   }
 }

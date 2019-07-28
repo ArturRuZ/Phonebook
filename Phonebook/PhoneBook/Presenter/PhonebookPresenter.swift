@@ -6,7 +6,7 @@
 //  Copyright © 2019 Артур. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class PhonebookPresenter {
   
@@ -58,12 +58,18 @@ extension PhonebookPresenter: PhonebookViewOutputProtocol {
   func  searchingEnding() {
     self.interactor.endSearch()
   }
+  func rowSelected(record: PhonebookObjectProtocol) {
+    self.delegate.show(phoneCard: record)
+  }
 }
 
 // MARK: - PhonebookInteractorOutputProtocol implementation
 
 extension PhonebookPresenter: PhonebookInteractorOutputProtocol {
-  func prepare(phonebook: [PhonebookObjectProtocol]) {
+  func prepareForShow(phonebook: [PhonebookObjectProtocol]) {
   self.view.show(phonebook: phonebook)
+  }
+  func prepare(alert: UIAlertController) {
+    self.view.show(alert: alert)
   }
 }

@@ -19,6 +19,7 @@ struct Results: Codable {
 }
 struct Name: Codable {
   var first: String
+  var patronymic: String?
   var last: String
 }
 struct PhotoUrls: Codable {

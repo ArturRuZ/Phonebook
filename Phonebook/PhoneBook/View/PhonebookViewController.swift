@@ -19,7 +19,7 @@ final class PhonebookViewController: UIViewController {
   
   private var viewOutput: PhonebookViewOutputProtocol!
   private let kPhonebookCellNib = UINib(nibName: "PhonebookCell", bundle: nil)
-  private let kPhonebookCellIdentifier = "kPhonebookCellReuseIdentifier"
+  private let kPhonebookCellIdentifier = "PhonebookCellReuseIdentifier"
   private var phonebookRecords = [PhonebookObjectProtocol]()
 
 
@@ -44,7 +44,7 @@ override func viewDidLoad() {
   }
 }
 
-// MARK: - Implementatin PhonebookViewInputProtocol
+// MARK: - Implementation PhonebookViewInputProtocol
 
 extension PhonebookViewController: PhonebookViewInputProtocol {
   var output: PhonebookViewOutputProtocol {
@@ -59,9 +59,12 @@ extension PhonebookViewController: PhonebookViewInputProtocol {
     self.phonebookRecords = phonebook
     phonebookTableView.reloadData()
   }
+  func show(alert: UIAlertController) {
+    self.present(alert, animated: true)
+  }
 }
 
-// MARK: - Implementatin UITableViewDataSource
+// MARK: - Implementation UITableViewDataSource
 
 extension PhonebookViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +86,7 @@ extension PhonebookViewController: UITableViewDataSource {
 extension PhonebookViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    //viewOutput.rowSelected(with: phonebookRecords[indexPath.row])
+    viewOutput.rowSelected(record: phonebookRecords[indexPath.row])
   }
 }
 

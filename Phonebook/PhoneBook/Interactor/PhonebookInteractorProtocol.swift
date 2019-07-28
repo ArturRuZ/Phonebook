@@ -6,7 +6,7 @@
 //  Copyright © 2019 Артур. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol  PhonebookInteractorInputProtocol: class {
   var output: PhonebookInteractorOutputProtocol {get set}
@@ -16,6 +16,6 @@ protocol  PhonebookInteractorInputProtocol: class {
 }
 
 protocol  PhonebookInteractorOutputProtocol: class {
-  func prepare(phonebook: [PhonebookObjectProtocol])
+  func prepareForShow(phonebook: [PhonebookObjectProtocol])
+  func prepare(alert: UIAlertController)
 }
-

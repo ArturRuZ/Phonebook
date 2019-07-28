@@ -13,7 +13,7 @@ final class PhonebookObject: PhonebookObjectProtocol {
   // MARK: - Properties
   
   var firstName: String
-  var patronymic: String
+  var patronymic: String = ""
   var lastName: String
   var email: String
   var phone: String
@@ -22,9 +22,11 @@ final class PhonebookObject: PhonebookObjectProtocol {
   
   // MARK: - Init
   
-  init(firstName: String,patronymic: String = "", lastName: String, email: String, phone: String, smallPhotoUrl: String, largePhotoUrl: String) {
+  init(firstName: String, patronymic: String?, lastName: String, email: String, phone: String, smallPhotoUrl: String, largePhotoUrl: String) {
     self.firstName = firstName
-    self.patronymic = patronymic
+    if let newPatronymic = patronymic {
+      self.patronymic = newPatronymic
+    }
     self.lastName = lastName
     self.email = email
     self.phone = phone
@@ -45,4 +47,14 @@ extension PhonebookObject: PhonebookCellProtocol {
   var photoUrl: String {
     return self.smallPhotoUrl
   }
+}
+
+// MARK: - PhoneCardNameCellProtocol Implementation
+
+extension PhonebookObject: PhoneCardNameCellProtocol {
+}
+
+// MARK: - PhoneCardEmailCellProtocol Implementation
+
+extension PhonebookObject: PhoneCardEmailCellProtocol {
 }

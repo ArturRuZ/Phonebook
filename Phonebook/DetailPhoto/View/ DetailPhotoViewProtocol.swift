@@ -9,8 +9,10 @@
 import Foundation
 
 protocol DetailPhotoViewOutputProtocol: class {
+  func viewDidLoad()
 }
 
 protocol DetailPhotoViewInputProtocol: class {
   var output: DetailPhotoViewOutputProtocol {get set}
+  func showPhotoWith(url: String)
 }

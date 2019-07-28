@@ -1,6 +1,6 @@
 //
-//  PhonecardPresenterProtocol.swift
-//  Phonecard
+//  PhoneCardPresenterProtocol.swift
+//  PhoneCard
 //
 //  Created by Артур on 26/07/2019.
 //  Copyright © 2019 Артур. All rights reserved.
@@ -8,9 +8,12 @@
 
 import Foundation
 
-protocol PhonecardPresenterInputProtocol: class {
-  var delegate: PhonecardPresenterDelegateProtocol {get set}
-  var input: PhonecardInteractorInputProtocol {get set}
-  var output: PhonecardViewInputProtocol {get set}
+protocol PhoneCardPresenterInputProtocol: class {
+  var delegate: PhoneCardPresenterDelegateProtocol {get set}
+  var input: PhoneCardInteractorInputProtocol {get set}
+  var output: PhoneCardViewInputProtocol {get set}
+  func prepare(phoneCard: PhonebookObjectProtocol)
 }
-protocol PhonecardPresenterDelegateProtocol: class {}
+protocol PhoneCardPresenterDelegateProtocol: class {
+  func showPhotoWith(url: String)
+}

@@ -10,5 +10,7 @@ import UIKit
 
 protocol ControllerBuilderProtocol: class {
   var cordinator: CoordinatorProtocol {get set}
-  func buildRootController() -> UIViewController
+  func buildPhonebookController() -> UIViewController
+  func buildPhoneCardController(for card: PhonebookObjectProtocol) -> UIViewController
+  func buildDetailPhotoController(for url: String) -> UIViewController
 }

@@ -12,24 +12,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="hMS-yC-nnR" customClass="PhonebookCellView" customModule="Phonebook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="hMS-yC-nnR" customClass="PhonebookCellView" customModule="Phonebook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hMS-yC-nnR" id="6z2-ED-8iX">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="97.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMu-re-8wY">
-                        <rect key="frame" x="40" y="32.5" width="284" height="20"/>
+                        <rect key="frame" x="40" y="21" width="284" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BZC-23-oqy">
-                        <rect key="frame" x="354" y="31" width="20" height="20"/>
+                        <rect key="frame" x="354" y="30.5" width="20" height="20"/>
                     </activityIndicatorView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jbX-wi-3kF">
-                        <rect key="frame" x="334" y="10.5" width="60" height="60"/>
+                        <rect key="frame" x="334" y="10" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jbX-wi-3kF" secondAttribute="height" id="T7Y-HB-WSk"/>
                             <constraint firstAttribute="height" constant="60" id="sCX-LV-off"/>
@@ -42,7 +42,7 @@
                     <constraint firstItem="BZC-23-oqy" firstAttribute="leading" secondItem="jbX-wi-3kF" secondAttribute="trailing" constant="-40" id="PLv-RI-ffB"/>
                     <constraint firstItem="jbX-wi-3kF" firstAttribute="top" secondItem="6z2-ED-8iX" secondAttribute="top" constant="10" id="SJY-9C-xyQ"/>
                     <constraint firstAttribute="trailing" secondItem="jbX-wi-3kF" secondAttribute="trailing" constant="20" id="Sif-Qi-dvI"/>
-                    <constraint firstItem="qMu-re-8wY" firstAttribute="top" secondItem="6z2-ED-8iX" secondAttribute="topMargin" constant="-23" id="Z4O-7U-4rG"/>
+                    <constraint firstItem="qMu-re-8wY" firstAttribute="top" secondItem="6z2-ED-8iX" secondAttribute="topMargin" constant="10" id="Z4O-7U-4rG"/>
                     <constraint firstItem="qMu-re-8wY" firstAttribute="centerY" secondItem="6z2-ED-8iX" secondAttribute="centerY" id="bXe-mg-J3l"/>
                     <constraint firstAttribute="bottom" secondItem="jbX-wi-3kF" secondAttribute="bottom" constant="10" id="kyc-Eg-uYI"/>
                     <constraint firstItem="qMu-re-8wY" firstAttribute="leading" secondItem="6z2-ED-8iX" secondAttribute="leading" constant="40" id="oR0-6p-Egy"/>
@@ -54,7 +54,7 @@
                 <outlet property="fullPersonNameLabel" destination="qMu-re-8wY" id="TwC-6P-8aP"/>
                 <outlet property="personPhotoImage" destination="jbX-wi-3kF" id="T5a-ZX-g92"/>
             </connections>
-            <point key="canvasLocation" x="718.84057971014499" y="-11.71875"/>
+            <point key="canvasLocation" x="718.84057971014499" y="-32.8125"/>
         </tableViewCell>
     </objects>
 </document>

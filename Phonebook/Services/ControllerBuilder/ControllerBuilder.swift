@@ -14,7 +14,7 @@ final class ControllerBuilder {
   
   private let internetService: InternetServiceProtocol
   private let searchService: SearchServiceProtocol
-  private weak var modulesCoordinator: CoordinatorProtocol!
+  private weak var coordinator: CoordinatorProtocol!
 
   
   // MARK: - Initialization
@@ -28,13 +28,24 @@ final class ControllerBuilder {
   
   private func createPhonebookController() -> (UIViewController) {
     let assembly = PhonebookAssembly()
-    guard let phonebookModule = assembly.build(internetService: self.internetService, searchService: self.searchService) else { return UIViewController() }
-    guard let cordinator = modulesCoordinator as? PhonebookPresenterDelegateProtocol else { return UIViewController() }
-    let navigationVC = UINavigationController()
+    guard let delegate = coordinator as? PhonebookPresenterDelegateProtocol else { return UIViewController() }
+    guard let phonebookModule = assembly.build(internetService: self.internetService, searchService: self.searchService, delegate: delegate) else { return UIViewController() }
     phonebookModule.controller.navigationItem.title = "Phonebook"
-    navigationVC.pushViewController(phonebookModule.controller, animated: true)
-    phonebookModule.presenter.delegate = cordinator
-    return navigationVC
+    return phonebookModule.controller
+  }
+  private func createPhoneCardController(for card: PhonebookObjectProtocol) -> UIViewController {
+    let assembly = PhoneCardAssembly()
+    guard let delegate = coordinator as? PhoneCardPresenterDelegateProtocol else { return UIViewController() }
+    guard let phoneCardModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    phoneCardModule.presenter.prepare(phoneCard: card)
+    return phoneCardModule.controller
+  }
+  private func createDetailPhotoController(for url: String) -> UIViewController {
+    let assembly = DetailPhotoAssembly()
+    guard let delegate = coordinator as? DetailPhotoPresenterDelegateProtocol else { return UIViewController() }
+    guard let detailPhotoModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    detailPhotoModule.presenter.preparePhoto(withUrl: url)
+    return detailPhotoModule.controller
   }
 }
 
@@ -43,14 +54,20 @@ final class ControllerBuilder {
 extension ControllerBuilder: ControllerBuilderProtocol {
   var cordinator: CoordinatorProtocol {
     get {
-      return self.modulesCoordinator
+      return self.coordinator
     }
     set {
-      self.modulesCoordinator = newValue
+      self.coordinator = newValue
     }
   }
  
-  func buildRootController() -> UIViewController {
-   return createPhonebookController()
+  func buildPhonebookController() -> UIViewController {
+   return self.createPhonebookController()
+  }
+  func buildPhoneCardController(for card: PhonebookObjectProtocol) -> UIViewController {
+    return self.createPhoneCardController(for: card)
+  }
+  func buildDetailPhotoController(for url: String) -> UIViewController {
+    return self.createDetailPhotoController(for: url)
   }
 }

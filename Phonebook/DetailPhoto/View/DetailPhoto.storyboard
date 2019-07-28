@@ -17,9 +17,36 @@
                     <view key="view" contentMode="scaleToFill" id="dSP-xu-uvg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t99-bM-HAG">
+                                <rect key="frame" x="0.0" y="331.5" width="414" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="t99-bM-HAG" secondAttribute="height" multiplier="16:9" id="4Qp-7s-Phk"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="f69-lI-wOY">
+                                <rect key="frame" x="167" y="408" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="G7c-Xz-PZ5"/>
+                                    <constraint firstAttribute="width" constant="80" id="Sjd-OE-Vni"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t99-bM-HAG" firstAttribute="leading" secondItem="lB5-lp-cnm" secondAttribute="leading" id="ONy-lI-dmg"/>
+                            <constraint firstItem="t99-bM-HAG" firstAttribute="centerX" secondItem="dSP-xu-uvg" secondAttribute="centerX" id="ZQU-x4-kCx"/>
+                            <constraint firstItem="f69-lI-wOY" firstAttribute="centerY" secondItem="dSP-xu-uvg" secondAttribute="centerY" id="dAO-SU-fec"/>
+                            <constraint firstItem="t99-bM-HAG" firstAttribute="centerY" secondItem="dSP-xu-uvg" secondAttribute="centerY" id="lYm-Vb-EZz"/>
+                            <constraint firstItem="lB5-lp-cnm" firstAttribute="trailing" secondItem="t99-bM-HAG" secondAttribute="trailing" id="oAF-54-1hM"/>
+                            <constraint firstItem="f69-lI-wOY" firstAttribute="centerX" secondItem="dSP-xu-uvg" secondAttribute="centerX" id="vr6-GK-kSE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lB5-lp-cnm"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="f69-lI-wOY" id="q0Y-CB-G79"/>
+                        <outlet property="detailPersonUIImage" destination="t99-bM-HAG" id="0Q5-r6-8P1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nij-Ul-BnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,6 @@ import Foundation
 
 enum StoryboardName: String {
   case phonebook = "Phonebook"
-  case phonecard = "Phonecard"
+  case phoneCard = "PhoneCard"
   case detailPhoto = "DetailPhoto"
 }

@@ -6,15 +6,17 @@
 //  Copyright © 2019 Артур. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol PhonebookViewOutputProtocol: class {
   func viewDidLoad()
   func textInputInSearchBar(textForSearch: String)
   func searchingEnding()
+  func rowSelected(record: PhonebookObjectProtocol)
 }
 
 protocol PhonebookViewInputProtocol: class {
   var output: PhonebookViewOutputProtocol {get set}
   func show(phonebook: [PhonebookObjectProtocol])
+  func show(alert: UIAlertController)
 }

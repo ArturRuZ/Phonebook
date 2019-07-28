@@ -12,5 +12,6 @@ protocol DetailPhotoPresenterInputProtocol: class {
   var delegate: DetailPhotoPresenterDelegateProtocol {get set}
   var input: DetailPhotoInteractorInputProtocol {get set}
   var output: DetailPhotoViewInputProtocol {get set}
+  func preparePhoto(withUrl: String)
 }
 protocol DetailPhotoPresenterDelegateProtocol: class {}

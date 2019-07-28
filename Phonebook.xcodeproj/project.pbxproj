@@ -12,6 +12,14 @@
 		348E9A4C22ECC5DB00258573 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A4B22ECC5DB00258573 /* SearchService.swift */; };
 		348E9A4E22ECC67100258573 /* SearchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A4D22ECC67100258573 /* SearchOperation.swift */; };
 		348E9A5022ECCB2D00258573 /* SearchServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A4F22ECCB2D00258573 /* SearchServiceProtocol.swift */; };
+		348E9A5522ED9DA100258573 /* PhoneCardEmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348E9A5422ED9DA100258573 /* PhoneCardEmailCell.xib */; };
+		348E9A5722ED9DDB00258573 /* PhoneCardEmailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A5622ED9DDB00258573 /* PhoneCardEmailCellView.swift */; };
+		348E9A5922ED9DF200258573 /* PhoneCardEmailCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A5822ED9DF200258573 /* PhoneCardEmailCellProtocol.swift */; };
+		348E9A5B22ED9E0700258573 /* PhoneCardMessageSendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348E9A5A22ED9E0700258573 /* PhoneCardMessageSendCell.xib */; };
+		348E9A6122ED9E2C00258573 /* PhoneCardNameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A6022ED9E2C00258573 /* PhoneCardNameCellView.swift */; };
+		348E9A6522ED9E4100258573 /* PhoneCardNameCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A6422ED9E4100258573 /* PhoneCardNameCellProtocol.swift */; };
+		348E9A6722ED9E8100258573 /* PhoneCardNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348E9A6622ED9E8100258573 /* PhoneCardNameCell.xib */; };
+		348E9A6B22EDDD7300258573 /* PhoneCardNameCellDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E9A6A22EDDD7300258573 /* PhoneCardNameCellDelegateProtocol.swift */; };
 		34D7C0B722EB7A610042DB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C0B622EB7A610042DB19 /* AppDelegate.swift */; };
 		34D7C0C122EB7A630042DB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C0BF22EB7A630042DB19 /* LaunchScreen.storyboard */; };
 		34D7C0DC22EB7CC30042DB19 /* PhonebookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C0DB22EB7CC30042DB19 /* PhonebookInteractor.swift */; };
@@ -47,14 +55,14 @@
 		34D7C12B22EB926C0042DB19 /* DetailPhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C12522EB926C0042DB19 /* DetailPhotoInteractor.swift */; };
 		34D7C12E22EB92D80042DB19 /*  DetailPhotoViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C12D22EB92D80042DB19 /*  DetailPhotoViewProtocol.swift */; };
 		34D7C13022EB93110042DB19 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C12F22EB93110042DB19 /* DetailPhotoViewController.swift */; };
-		34D7C13D22EB955E0042DB19 /* PhonecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13322EB955E0042DB19 /* PhonecardViewController.swift */; };
-		34D7C13E22EB955E0042DB19 /* PhonecardViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13422EB955E0042DB19 /* PhonecardViewProtocol.swift */; };
+		34D7C13D22EB955E0042DB19 /* PhoneCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13322EB955E0042DB19 /* PhoneCardViewController.swift */; };
+		34D7C13E22EB955E0042DB19 /* PhoneCardViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13422EB955E0042DB19 /* PhoneCardViewProtocol.swift */; };
 		34D7C13F22EB955E0042DB19 /* PhonecardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13622EB955E0042DB19 /* PhonecardPresenter.swift */; };
 		34D7C14022EB955E0042DB19 /* PhonecardPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13722EB955E0042DB19 /* PhonecardPresenterProtocol.swift */; };
 		34D7C14122EB955E0042DB19 /* PhonecardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13922EB955E0042DB19 /* PhonecardInteractor.swift */; };
 		34D7C14222EB955E0042DB19 /* PhonecardInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13A22EB955E0042DB19 /* PhonecardInteractorProtocol.swift */; };
 		34D7C14322EB955E0042DB19 /* PhonecardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7C13C22EB955E0042DB19 /* PhonecardAssembly.swift */; };
-		34D7C14522EB96E70042DB19 /* Phonecard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C14422EB96E70042DB19 /* Phonecard.storyboard */; };
+		34D7C14522EB96E70042DB19 /* PhoneCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C14422EB96E70042DB19 /* PhoneCard.storyboard */; };
 		34D7C14722EB96FE0042DB19 /* DetailPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D7C14622EB96FE0042DB19 /* DetailPhoto.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +72,14 @@
 		348E9A4B22ECC5DB00258573 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		348E9A4D22ECC67100258573 /* SearchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperation.swift; sourceTree = "<group>"; };
 		348E9A4F22ECCB2D00258573 /* SearchServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceProtocol.swift; sourceTree = "<group>"; };
+		348E9A5422ED9DA100258573 /* PhoneCardEmailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneCardEmailCell.xib; sourceTree = "<group>"; };
+		348E9A5622ED9DDB00258573 /* PhoneCardEmailCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCardEmailCellView.swift; sourceTree = "<group>"; };
+		348E9A5822ED9DF200258573 /* PhoneCardEmailCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCardEmailCellProtocol.swift; sourceTree = "<group>"; };
+		348E9A5A22ED9E0700258573 /* PhoneCardMessageSendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneCardMessageSendCell.xib; sourceTree = "<group>"; };
+		348E9A6022ED9E2C00258573 /* PhoneCardNameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCardNameCellView.swift; sourceTree = "<group>"; };
+		348E9A6422ED9E4100258573 /* PhoneCardNameCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCardNameCellProtocol.swift; sourceTree = "<group>"; };
+		348E9A6622ED9E8100258573 /* PhoneCardNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneCardNameCell.xib; sourceTree = "<group>"; };
+		348E9A6A22EDDD7300258573 /* PhoneCardNameCellDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCardNameCellDelegateProtocol.swift; sourceTree = "<group>"; };
 		34D7C0B322EB7A610042DB19 /* Phonebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phonebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D7C0B622EB7A610042DB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34D7C0C022EB7A630042DB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,14 +117,14 @@
 		34D7C12522EB926C0042DB19 /* DetailPhotoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPhotoInteractor.swift; sourceTree = "<group>"; };
 		34D7C12D22EB92D80042DB19 /*  DetailPhotoViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DetailPhotoViewProtocol.swift"; sourceTree = "<group>"; };
 		34D7C12F22EB93110042DB19 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
-		34D7C13322EB955E0042DB19 /* PhonecardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonecardViewController.swift; sourceTree = "<group>"; };
-		34D7C13422EB955E0042DB19 /* PhonecardViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonecardViewProtocol.swift; sourceTree = "<group>"; };
+		34D7C13322EB955E0042DB19 /* PhoneCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCardViewController.swift; sourceTree = "<group>"; };
+		34D7C13422EB955E0042DB19 /* PhoneCardViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCardViewProtocol.swift; sourceTree = "<group>"; };
 		34D7C13622EB955E0042DB19 /* PhonecardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonecardPresenter.swift; sourceTree = "<group>"; };
 		34D7C13722EB955E0042DB19 /* PhonecardPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonecardPresenterProtocol.swift; sourceTree = "<group>"; };
 		34D7C13922EB955E0042DB19 /* PhonecardInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonecardInteractor.swift; sourceTree = "<group>"; };
 		34D7C13A22EB955E0042DB19 /* PhonecardInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonecardInteractorProtocol.swift; sourceTree = "<group>"; };
 		34D7C13C22EB955E0042DB19 /* PhonecardAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonecardAssembly.swift; sourceTree = "<group>"; };
-		34D7C14422EB96E70042DB19 /* Phonecard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phonecard.storyboard; sourceTree = "<group>"; };
+		34D7C14422EB96E70042DB19 /* PhoneCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhoneCard.storyboard; sourceTree = "<group>"; };
 		34D7C14622EB96FE0042DB19 /* DetailPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPhoto.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +147,35 @@
 				348E9A4D22ECC67100258573 /* SearchOperation.swift */,
 			);
 			path = SearchService;
+			sourceTree = "<group>";
+		};
+		348E9A5122ED9CF100258573 /* PhoneCardNameCell */ = {
+			isa = PBXGroup;
+			children = (
+				348E9A6622ED9E8100258573 /* PhoneCardNameCell.xib */,
+				348E9A6022ED9E2C00258573 /* PhoneCardNameCellView.swift */,
+				348E9A6422ED9E4100258573 /* PhoneCardNameCellProtocol.swift */,
+				348E9A6A22EDDD7300258573 /* PhoneCardNameCellDelegateProtocol.swift */,
+			);
+			path = PhoneCardNameCell;
+			sourceTree = "<group>";
+		};
+		348E9A5222ED9D3F00258573 /* PhoneCardEmailCell */ = {
+			isa = PBXGroup;
+			children = (
+				348E9A5422ED9DA100258573 /* PhoneCardEmailCell.xib */,
+				348E9A5622ED9DDB00258573 /* PhoneCardEmailCellView.swift */,
+				348E9A5822ED9DF200258573 /* PhoneCardEmailCellProtocol.swift */,
+			);
+			path = PhoneCardEmailCell;
+			sourceTree = "<group>";
+		};
+		348E9A5322ED9D6400258573 /* PhoneCardMessageSendCell */ = {
+			isa = PBXGroup;
+			children = (
+				348E9A5A22ED9E0700258573 /* PhoneCardMessageSendCell.xib */,
+			);
+			path = PhoneCardMessageSendCell;
 			sourceTree = "<group>";
 		};
 		34D7C0AA22EB7A610042DB19 = {
@@ -169,7 +214,6 @@
 		34D7C0C822EB7A6F0042DB19 /* PhoneBook */ = {
 			isa = PBXGroup;
 			children = (
-				34D7C0FC22EB851A0042DB19 /* Entity */,
 				34D7C0CA22EB7AA00042DB19 /* Assembly */,
 				34D7C0CB22EB7AA60042DB19 /* Interactor */,
 				34D7C0CC22EB7AB10042DB19 /* Presenter */,
@@ -182,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				34D7C13B22EB955E0042DB19 /* Assembly */,
-				34D7C13122EB955E0042DB19 /* Entity */,
 				34D7C13822EB955E0042DB19 /* Interactor */,
 				34D7C13522EB955E0042DB19 /* Presenter */,
 				34D7C13222EB955E0042DB19 /* View */,
@@ -219,10 +262,10 @@
 		34D7C0CD22EB7ABC0042DB19 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				34D7C10622EB88E10042DB19 /* PhotobookCell */,
+				34D7C10622EB88E10042DB19 /* PhonebookCell */,
+				34D7C10422EB88710042DB19 /* Phonebook.storyboard */,
 				34D7C0F122EB7F8B0042DB19 /* PhonebookViewController.swift */,
 				34D7C0F922EB818F0042DB19 /* PhonebookViewProtocol.swift */,
-				34D7C10422EB88710042DB19 /* Phonebook.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +283,7 @@
 		34D7C0EE22EB7ED40042DB19 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34D7C0FC22EB851A0042DB19 /* Entity */,
 				34D7C0EF22EB7F010042DB19 /* Result.swift */,
 				34D7C0F322EB80140042DB19 /* StoryboardName.swift */,
 				34D7C0F522EB80780042DB19 /* UIViewControllerStoryboardID.swift */,
@@ -271,7 +315,6 @@
 		34D7C10322EB87F70042DB19 /* DetailPhoto */ = {
 			isa = PBXGroup;
 			children = (
-				34D7C12622EB926C0042DB19 /* Entity */,
 				34D7C11E22EB926C0042DB19 /* Assembly */,
 				34D7C12322EB926C0042DB19 /* Interactor */,
 				34D7C12022EB926C0042DB19 /* Presenter */,
@@ -280,14 +323,14 @@
 			path = DetailPhoto;
 			sourceTree = "<group>";
 		};
-		34D7C10622EB88E10042DB19 /* PhotobookCell */ = {
+		34D7C10622EB88E10042DB19 /* PhonebookCell */ = {
 			isa = PBXGroup;
 			children = (
 				34D7C10722EB891C0042DB19 /* PhonebookCell.xib */,
-				34D7C10922EB89FC0042DB19 /* PhonebookCellProtocol.swift */,
 				34D7C10B22EB8A130042DB19 /* PhonebookCellView.swift */,
+				34D7C10922EB89FC0042DB19 /* PhonebookCellProtocol.swift */,
 			);
-			path = PhotobookCell;
+			path = PhonebookCell;
 			sourceTree = "<group>";
 		};
 		34D7C11322EB8CCE0042DB19 /* Coordinator */ = {
@@ -344,36 +387,25 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		34D7C12622EB926C0042DB19 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		34D7C12C22EB929B0042DB19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34D7C14622EB96FE0042DB19 /* DetailPhoto.storyboard */,
 				34D7C12D22EB92D80042DB19 /*  DetailPhotoViewProtocol.swift */,
 				34D7C12F22EB93110042DB19 /* DetailPhotoViewController.swift */,
-				34D7C14622EB96FE0042DB19 /* DetailPhoto.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		34D7C13122EB955E0042DB19 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		34D7C13222EB955E0042DB19 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				34D7C13322EB955E0042DB19 /* PhonecardViewController.swift */,
-				34D7C13422EB955E0042DB19 /* PhonecardViewProtocol.swift */,
-				34D7C14422EB96E70042DB19 /* Phonecard.storyboard */,
+				348E9A5122ED9CF100258573 /* PhoneCardNameCell */,
+				348E9A5222ED9D3F00258573 /* PhoneCardEmailCell */,
+				348E9A5322ED9D6400258573 /* PhoneCardMessageSendCell */,
+				34D7C13322EB955E0042DB19 /* PhoneCardViewController.swift */,
+				34D7C13422EB955E0042DB19 /* PhoneCardViewProtocol.swift */,
+				34D7C14422EB96E70042DB19 /* PhoneCard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,9 +494,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D7C14522EB96E70042DB19 /* Phonecard.storyboard in Resources */,
+				34D7C14522EB96E70042DB19 /* PhoneCard.storyboard in Resources */,
 				34D7C10522EB88710042DB19 /* Phonebook.storyboard in Resources */,
 				34D7C0C122EB7A630042DB19 /* LaunchScreen.storyboard in Resources */,
+				348E9A6722ED9E8100258573 /* PhoneCardNameCell.xib in Resources */,
+				348E9A5522ED9DA100258573 /* PhoneCardEmailCell.xib in Resources */,
+				348E9A5B22ED9E0700258573 /* PhoneCardMessageSendCell.xib in Resources */,
 				34D7C14722EB96FE0042DB19 /* DetailPhoto.storyboard in Resources */,
 				348E9A4622EC772000258573 /* Assets.xcassets in Resources */,
 				34D7C10822EB891C0042DB19 /* PhonebookCell.xib in Resources */,
@@ -484,8 +519,10 @@
 				34D7C0DC22EB7CC30042DB19 /* PhonebookInteractor.swift in Sources */,
 				34D7C11722EB8D040042DB19 /* CoordinatorProtocol.swift in Sources */,
 				34D7C0EB22EB7E600042DB19 /* InternetServiceProtocol.swift in Sources */,
+				348E9A6122ED9E2C00258573 /* PhoneCardNameCellView.swift in Sources */,
 				34D7C0F822EB80AF0042DB19 /* ErrorList.swift in Sources */,
 				34D7C11922EB8DBA0042DB19 /* ControllerBuilder.swift in Sources */,
+				348E9A5922ED9DF200258573 /* PhoneCardEmailCellProtocol.swift in Sources */,
 				34D7C0E922EB7E560042DB19 /* InternetService.swift in Sources */,
 				348E9A4E22ECC67100258573 /* SearchOperation.swift in Sources */,
 				34D7C10222EB86710042DB19 /* PhonebookObjectProtocol.swift in Sources */,
@@ -500,7 +537,7 @@
 				34D7C14122EB955E0042DB19 /* PhonecardInteractor.swift in Sources */,
 				34D7C14322EB955E0042DB19 /* PhonecardAssembly.swift in Sources */,
 				34D7C11022EB8C2A0042DB19 /* Application.swift in Sources */,
-				34D7C13D22EB955E0042DB19 /* PhonecardViewController.swift in Sources */,
+				34D7C13D22EB955E0042DB19 /* PhoneCardViewController.swift in Sources */,
 				34D7C13F22EB955E0042DB19 /* PhonecardPresenter.swift in Sources */,
 				34D7C10C22EB8A130042DB19 /* PhonebookCellView.swift in Sources */,
 				34D7C0E622EB7DD30042DB19 /* PhonebookInteractorProtocol.swift in Sources */,
@@ -509,6 +546,7 @@
 				348E9A4C22ECC5DB00258573 /* SearchService.swift in Sources */,
 				34D7C13022EB93110042DB19 /* DetailPhotoViewController.swift in Sources */,
 				34D7C0F622EB80780042DB19 /* UIViewControllerStoryboardID.swift in Sources */,
+				348E9A6522ED9E4100258573 /* PhoneCardNameCellProtocol.swift in Sources */,
 				34D7C14022EB955E0042DB19 /* PhonecardPresenterProtocol.swift in Sources */,
 				34D7C11522EB8CFD0042DB19 /* Coordinator.swift in Sources */,
 				34D7C0B722EB7A610042DB19 /* AppDelegate.swift in Sources */,
@@ -517,9 +555,11 @@
 				34D7C12722EB926C0042DB19 /* DetailPhotoAssembly.swift in Sources */,
 				34D7C14222EB955E0042DB19 /* PhonecardInteractorProtocol.swift in Sources */,
 				34D7C12A22EB926C0042DB19 /* DetailPhotoInteractorProtocol.swift in Sources */,
-				34D7C13E22EB955E0042DB19 /* PhonecardViewProtocol.swift in Sources */,
+				348E9A6B22EDDD7300258573 /* PhoneCardNameCellDelegateProtocol.swift in Sources */,
+				34D7C13E22EB955E0042DB19 /* PhoneCardViewProtocol.swift in Sources */,
 				34D7C0F422EB80140042DB19 /* StoryboardName.swift in Sources */,
 				348E9A4922EC9A1100258573 /* UIimageViewDownloadExtension.swift in Sources */,
+				348E9A5722ED9DDB00258573 /* PhoneCardEmailCellView.swift in Sources */,
 				34D7C0FA22EB818F0042DB19 /* PhonebookViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

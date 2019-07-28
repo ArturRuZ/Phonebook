@@ -17,7 +17,7 @@ final class DetailPhotoPresenter {
   private var interactor: DetailPhotoInteractorInputProtocol!
 }
 
-// MARK: - DetailPhoto_PresenterInputProtocol implementation
+// MARK: - DetailPhotoPresenterInputProtocol implementation
 
 extension DetailPhotoPresenter: DetailPhotoPresenterInputProtocol {
   var delegate: DetailPhotoPresenterDelegateProtocol {
@@ -44,14 +44,24 @@ extension DetailPhotoPresenter: DetailPhotoPresenterInputProtocol {
       view = newValue
     }
   }
+  
+  func viewDidLoad() {
+    self.interactor.downloadUrl()
+  }
+  func preparePhoto(withUrl: String) {
+    self.interactor.save(url: withUrl)
+  }
 }
 
-// MARK: - DetailPhoto_ViewOutputProtocol implementation
+// MARK: - DetailPhotoViewOutputProtocol implementation
 
 extension DetailPhotoPresenter: DetailPhotoViewOutputProtocol {
 }
 
-// MARK: - DetailPhoto_InteractorOutputProtocol implementation
+// MARK: - DetailPhotoInteractorOutputProtocol implementation
 
 extension DetailPhotoPresenter: DetailPhotoInteractorOutputProtocol {
+  func prepareForShow(url: String) {
+    view.showPhotoWith(url: url)
+  }
 }

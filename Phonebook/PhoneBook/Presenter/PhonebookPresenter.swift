@@ -6,7 +6,7 @@
 //  Copyright © 2019 Артур. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class PhonebookPresenter {
   
@@ -17,7 +17,7 @@ final class PhonebookPresenter {
   private var interactor: PhonebookInteractorInputProtocol!
 }
 
-// MARK: - Phonebook_PresenterInputProtocol implementation
+// MARK: - PhonebookPresenterInputProtocol implementation
 
 extension PhonebookPresenter: PhonebookPresenterInputProtocol {
   var delegate: PhonebookPresenterDelegateProtocol {
@@ -46,12 +46,30 @@ extension PhonebookPresenter: PhonebookPresenterInputProtocol {
   }
 }
 
-// MARK: - Phonebook_ViewOutputProtocol implementation
+// MARK: - PhonebookViewOutputProtocol implementation
 
 extension PhonebookPresenter: PhonebookViewOutputProtocol {
+  func viewDidLoad() {
+    self.interactor.downloadPhonebook()
+  }
+  func textInputInSearchBar(textForSearch: String) {
+    self.interactor.findBy(textForSearch)
+  }
+  func  searchingEnding() {
+    self.interactor.endSearch()
+  }
+  func rowSelected(record: PhonebookObjectProtocol) {
+    self.delegate.show(phoneCard: record)
+  }
 }
 
-// MARK: - Phonebook_InteractorOutputProtocol implementation
+// MARK: - PhonebookInteractorOutputProtocol implementation
 
 extension PhonebookPresenter: PhonebookInteractorOutputProtocol {
+  func prepareForShow(phonebook: [PhonebookObjectProtocol]) {
+  self.view.show(phonebook: phonebook)
+  }
+  func prepare(alert: UIAlertController) {
+    self.view.show(alert: alert)
+  }
 }

@@ -13,8 +13,7 @@ final class DetailPhotoInteractor {
   // MARK: - Properties
   
   weak var interactorOutput: DetailPhotoInteractorOutputProtocol!
-
-  // MARK: - Private methods
+  private var currentUrl: String?
 }
 
 // MARK: - DetailPhotoInteractorInputProtocol implementation
@@ -27,5 +26,13 @@ extension DetailPhotoInteractor: DetailPhotoInteractorInputProtocol {
     set {
       interactorOutput = newValue
     }
+  }
+  
+  func save(url: String) {
+    self.currentUrl = url
+  }
+  func downloadUrl() {
+    guard let currentUrl = currentUrl else { return }
+    self.interactorOutput.prepareForShow(url: currentUrl)
   }
 }

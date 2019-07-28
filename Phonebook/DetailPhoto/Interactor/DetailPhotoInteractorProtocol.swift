@@ -10,7 +10,10 @@ import Foundation
 
 protocol  DetailPhotoInteractorInputProtocol: class {
   var output: DetailPhotoInteractorOutputProtocol {get set}
+  func save(url: String)
+  func downloadUrl()
 }
 
 protocol  DetailPhotoInteractorOutputProtocol: class {
+  func prepareForShow(url: String)
 }

@@ -39,6 +39,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EoG-kI-Vyz"/>
                     </view>
+                    <connections>
+                        <outlet property="phonebookSearchBar" destination="fNi-TX-1aZ" id="lUE-jj-wxm"/>
+                        <outlet property="phonebookTableView" destination="bh8-cQ-zI9" id="TEV-L4-kID"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YyT-89-713" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

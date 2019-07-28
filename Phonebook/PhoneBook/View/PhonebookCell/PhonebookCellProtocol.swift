@@ -1,5 +1,5 @@
 //
-//  PhotobookCellView.swift
+//  PhonebookCellProtocol.swift
 //  Phonebook
 //
 //  Created by Артур on 26/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotobookCellView: UITableViewCell {
-
-  
+protocol PhonebookCellProtocol {
+  var photoUrl: String {get}
+  func getFullName() -> String
 }

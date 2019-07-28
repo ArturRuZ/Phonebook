@@ -1,6 +1,6 @@
 //
-//  PhonecardInteractor.swift
-//  Phonecard
+//  PhoneCardInteractor.swift
+//  PhoneCard
 //
 //  Created by Артур on 26/07/2019.
 //  Copyright © 2019 Артур. All rights reserved.
@@ -8,24 +8,31 @@
 
 import Foundation
 
-final class PhonecardInteractor {
+final class PhoneCardInteractor {
   
   // MARK: - Properties
   
-  weak var interactorOutput: PhonecardInteractorOutputProtocol!
-
-  // MARK: - Private methods
+  weak var interactorOutput: PhoneCardInteractorOutputProtocol!
+  private var currenPhoneCard: PhonebookObjectProtocol?
 }
 
-// MARK: - PhonecardInteractorInputProtocol implementation
+// MARK: - PhoneCardInteractorInputProtocol implementation
 
-extension PhonecardInteractor: PhonecardInteractorInputProtocol {
-  var output: PhonecardInteractorOutputProtocol {
+extension PhoneCardInteractor: PhoneCardInteractorInputProtocol {
+  var output: PhoneCardInteractorOutputProtocol {
     get {
       return interactorOutput
     }
     set {
       interactorOutput = newValue
     }
+  }
+
+  func save(phoneCard: PhonebookObjectProtocol) {
+    self.currenPhoneCard = phoneCard
+  }
+  func downloadPhoneCard() {
+    guard let phoneCard = currenPhoneCard else { return }
+    self.interactorOutput.prepareForShow(phoneCard: phoneCard)
   }
 }

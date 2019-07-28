@@ -10,16 +10,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Phonecard View Controller-->
+        <!--Phone Card View Controller-->
         <scene sceneID="O9M-VX-NW7">
             <objects>
-                <viewController storyboardIdentifier="PhonecardViewController" id="Geg-Ia-3co" customClass="PhonecardViewController" customModule="Phonebook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneCardViewController" id="Geg-Ia-3co" customClass="PhoneCardViewController" customModule="Phonebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yoh-bU-wt2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8T-jC-k3A">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xcX-oH-NQW" firstAttribute="bottom" secondItem="m8T-jC-k3A" secondAttribute="bottom" id="7JW-ZJ-xCV"/>
+                            <constraint firstItem="m8T-jC-k3A" firstAttribute="leading" secondItem="xcX-oH-NQW" secondAttribute="leading" id="gap-Gg-jdY"/>
+                            <constraint firstItem="xcX-oH-NQW" firstAttribute="trailing" secondItem="m8T-jC-k3A" secondAttribute="trailing" id="qtA-9D-7vV"/>
+                            <constraint firstItem="m8T-jC-k3A" firstAttribute="top" secondItem="xcX-oH-NQW" secondAttribute="top" id="ycm-EX-8nz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xcX-oH-NQW"/>
                     </view>
+                    <connections>
+                        <outlet property="phoneCardTableView" destination="m8T-jC-k3A" id="L9m-5D-Ua7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eY-Si-WAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,4 +13,6 @@ protocol PhonebookPresenterInputProtocol: class {
   var input: PhonebookInteractorInputProtocol {get set}
   var output: PhonebookViewInputProtocol {get set}
 }
-protocol PhonebookPresenterDelegateProtocol: class {}
+protocol PhonebookPresenterDelegateProtocol: class {
+  func show(phoneCard: PhonebookObjectProtocol)
+}

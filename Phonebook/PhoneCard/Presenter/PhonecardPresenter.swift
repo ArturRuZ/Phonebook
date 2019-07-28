@@ -1,6 +1,6 @@
 //
-//  PhonecardPresenter.swift
-//  Phonecard
+//  PhoneCardPresenter.swift
+//  PhoneCard
 //
 //  Created by Артур on 26/07/2019.
 //  Copyright © 2019 Артур. All rights reserved.
@@ -8,19 +8,19 @@
 
 import Foundation
 
-final class PhonecardPresenter {
+final class PhoneCardPresenter {
   
   // MARK: - properties
   
-  private weak var presenterDelegate: PhonecardPresenterDelegateProtocol!
-  private weak var view: PhonecardViewInputProtocol!
-  private var interactor: PhonecardInteractorInputProtocol!
+  private weak var presenterDelegate: PhoneCardPresenterDelegateProtocol!
+  private weak var view: PhoneCardViewInputProtocol!
+  private var interactor: PhoneCardInteractorInputProtocol!
 }
 
-// MARK: - Phonecard_PresenterInputProtocol implementation
+// MARK: - PhoneCard_PresenterInputProtocol implementation
 
-extension PhonecardPresenter: PhonecardPresenterInputProtocol {
-  var delegate: PhonecardPresenterDelegateProtocol {
+extension PhoneCardPresenter: PhoneCardPresenterInputProtocol {
+  var delegate: PhoneCardPresenterDelegateProtocol {
     get {
       return presenterDelegate
     }
@@ -28,7 +28,7 @@ extension PhonecardPresenter: PhonecardPresenterInputProtocol {
       presenterDelegate = newValue
     }
   }
-  var input: PhonecardInteractorInputProtocol {
+  var input: PhoneCardInteractorInputProtocol {
     get {
       return interactor
     }
@@ -36,7 +36,7 @@ extension PhonecardPresenter: PhonecardPresenterInputProtocol {
       interactor = newValue
     }
   }
-  var output: PhonecardViewInputProtocol {
+  var output: PhoneCardViewInputProtocol {
     get {
       return view
     }
@@ -44,14 +44,27 @@ extension PhonecardPresenter: PhonecardPresenterInputProtocol {
       view = newValue
     }
   }
+  
+  func prepare(phoneCard: PhonebookObjectProtocol) {
+    interactor.save(phoneCard: phoneCard)
+  }
 }
 
-// MARK: - Phonecard_ViewOutputProtocol implementation
+// MARK: - PhoneCardViewOutputProtocol implementation
 
-extension PhonecardPresenter: PhonecardViewOutputProtocol {
+extension PhoneCardPresenter: PhoneCardViewOutputProtocol {
+  func viewDidLoad() {
+    self.interactor.downloadPhoneCard()
+  }
+  func personPhotoSelectedWith(url: String) {
+    self.delegate.showPhotoWith(url: url)
+  }
 }
 
-// MARK: - Phonecard_InteractorOutputProtocol implementation
+// MARK: - PhoneCard_InteractorOutputProtocol implementation
 
-extension PhonecardPresenter: PhonecardInteractorOutputProtocol {
+extension PhoneCardPresenter: PhoneCardInteractorOutputProtocol {
+  func prepareForShow(phoneCard: PhonebookObjectProtocol) {
+    self.view.show(phoneCard: phoneCard)
+  }
 }

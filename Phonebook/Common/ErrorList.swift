@@ -11,4 +11,6 @@ import Foundation
 enum ErrorsList: Error {
   case urlIsIncorrect
   case downloadIsCanceled
+  case searchIsCanceled
+  case recordsInPhonebookNotFound
 }

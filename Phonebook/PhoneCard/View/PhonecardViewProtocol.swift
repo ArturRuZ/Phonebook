@@ -1,5 +1,5 @@
 //
-//  PhonecardProtocol.swift
+//  PhoneCardProtocol.swift
 //  Phonebook
 //
 //  Created by Артур on 26/07/2019.
@@ -8,9 +8,12 @@
 
 import Foundation
 
-protocol PhonecardViewOutputProtocol: class {
+protocol PhoneCardViewOutputProtocol: class {
+  func viewDidLoad()
+  func personPhotoSelectedWith(url: String)
 }
 
-protocol PhonecardViewInputProtocol: class {
-  var output: PhonecardViewOutputProtocol {get set}
+protocol PhoneCardViewInputProtocol: class {
+  var output: PhoneCardViewOutputProtocol {get set}
+  func show(phoneCard: PhonebookObjectProtocol)
 }

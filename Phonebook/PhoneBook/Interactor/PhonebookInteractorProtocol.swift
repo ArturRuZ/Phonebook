@@ -6,11 +6,16 @@
 //  Copyright © 2019 Артур. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol  PhonebookInteractorInputProtocol: class {
   var output: PhonebookInteractorOutputProtocol {get set}
+  func downloadPhonebook()
+  func findBy(_ fio: String)
+  func endSearch()
 }
 
 protocol  PhonebookInteractorOutputProtocol: class {
+  func prepareForShow(phonebook: [PhonebookObjectProtocol])
+  func prepare(alert: UIAlertController)
 }

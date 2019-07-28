@@ -15,7 +15,6 @@ enum Result<Value> {
   init(value: Value) {
     self = .success(value)
   }
-  
   init(error: Error) {
     self = .error(error)
   }
@@ -26,7 +25,6 @@ enum Result<Value> {
     case .error: return nil
     }
   }
-  
   var error: Error? {
     switch self {
     case .success: return nil

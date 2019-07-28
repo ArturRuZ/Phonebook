@@ -10,13 +10,12 @@ import UIKit
 
 final class ControllerBuilder {
   
-  // MARK: - Private properties
+  // MARK: - Properties
   
   private let internetService: InternetServiceProtocol
   private let searchService: SearchServiceProtocol
   private weak var coordinator: CoordinatorProtocol!
 
-  
   // MARK: - Initialization
   
   init(internetService: InternetServiceProtocol, searchService: SearchServiceProtocol) {

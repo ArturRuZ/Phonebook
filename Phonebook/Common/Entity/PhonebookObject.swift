@@ -13,14 +13,14 @@ final class PhonebookObject: PhonebookObjectProtocol {
   // MARK: - Properties
   
   var firstName: String
-  var patronymic: String = ""
+  var patronymic  = ""
   var lastName: String
   var email: String
   var phone: String
   var smallPhotoUrl: String
   var largePhotoUrl: String
   
-  // MARK: - Init
+  // MARK: - Initialization
   
   init(firstName: String, patronymic: String?, lastName: String, email: String, phone: String, smallPhotoUrl: String, largePhotoUrl: String) {
     self.firstName = firstName

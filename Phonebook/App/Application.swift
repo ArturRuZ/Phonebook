@@ -10,7 +10,7 @@ import UIKit
 
 final class Application {
   
-  // MARK: - Private properties
+  // MARK: - Properties
   
   private let modulesCoordinator: CoordinatorProtocol = {
     let internetService = InternetService()

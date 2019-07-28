@@ -9,5 +9,6 @@
 import Foundation
 
 protocol SearchServiceProtocol: class {
-  func findRecordsInPhonebook(searchText: String, phonebook: [PhonebookObjectProtocol],completion: @escaping (Result<[PhonebookObjectProtocol]>) -> Void)
+  func findRecordsInPhonebook(searchText: String, phonebook: [PhonebookObjectProtocol],
+                              completion: @escaping (Result<[PhonebookObjectProtocol]>) -> Void)
 }

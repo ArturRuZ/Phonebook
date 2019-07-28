@@ -10,7 +10,7 @@ import UIKit
 
 final class Coordinator {
   
-  // MARK: - Private properties
+  // MARK: - Properties
   
   private let controllerBuilder: ControllerBuilderProtocol
   lazy private var rootController: UINavigationController = {
@@ -19,14 +19,12 @@ final class Coordinator {
         navigationVC.pushViewController(phonebookController, animated: true)
     return navigationVC
 }()
+  
   // MARK: - Initialization
   
   init(controllerBuilder: ControllerBuilderProtocol) {
     self.controllerBuilder = controllerBuilder
   }
-  
-  // MARK: - Private methods
-  
 }
 
 // MARK: - CoordinatorProtocol implementation

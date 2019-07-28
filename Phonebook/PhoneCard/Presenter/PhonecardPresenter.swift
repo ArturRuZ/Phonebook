@@ -15,12 +15,6 @@ final class PhoneCardPresenter {
   private weak var presenterDelegate: PhoneCardPresenterDelegateProtocol!
   private weak var view: PhoneCardViewInputProtocol!
   private var interactor: PhoneCardInteractorInputProtocol!
-  
- // MARK: - BuildIn methods
-  
-  deinit {
-    print ("PhoneCardPresenter Deinited")
-  }
 }
 
 // MARK: - PhoneCard_PresenterInputProtocol implementation
@@ -64,9 +58,6 @@ extension PhoneCardPresenter: PhoneCardViewOutputProtocol {
   }
   func personPhotoSelectedWith(url: String) {
     self.delegate.showPhotoWith(url: url)
-  }
-  
-  func callButtonPressed() {
   }
 }
 

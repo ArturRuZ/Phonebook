@@ -13,7 +13,7 @@ final class SearchService {
   // MARK: - Properties
   
   private var searchQueue = OperationQueue()
-
+  
   // MARK: - Initialization
   
   init() {
@@ -22,12 +22,12 @@ final class SearchService {
   }
 }
 
- // MARK: - SearchService protocol Implementation
+// MARK: - SearchService protocol Implementation
 
 extension SearchService: SearchServiceProtocol {
   func findRecordsInPhonebook(searchText: String, phonebook: [PhonebookObjectProtocol], completion: @escaping (Result<[PhonebookObjectProtocol]>) -> Void) {
     searchQueue.cancelAllOperations()
     searchQueue.addOperation (
       SearchInPhonebookOperation(searchText: searchText, phonebook: phonebook, completion: completion)
-  )}
+    )}
 }

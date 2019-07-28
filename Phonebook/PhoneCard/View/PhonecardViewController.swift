@@ -34,10 +34,6 @@ final class PhoneCardViewController: UIViewController {
     viewOutput.viewDidLoad()
   }
   
-  deinit {
-    print ("PhoneCardViewController Deinited")
-  }
-  
   // MARK: - Private methods
   
   private func setUpUI() {
@@ -45,7 +41,7 @@ final class PhoneCardViewController: UIViewController {
       title: "Back", style: .plain, target: nil, action: nil)
     phoneCardTableView.register(kPhoneCardNameCellNib, forCellReuseIdentifier: kPhoneCardNameCellIdentifier)
     phoneCardTableView.register(kPhoneCardEmailCellNib, forCellReuseIdentifier: kPhoneCardEmailCellIdentifier)
-    phoneCardTableView.register(kPhoneCardMessageSendCellNib , forCellReuseIdentifier: kPhoneCardMessageSendCellIdentifier)
+    phoneCardTableView.register(kPhoneCardMessageSendCellNib, forCellReuseIdentifier: kPhoneCardMessageSendCellIdentifier)
     phoneCardTableView.rowHeight = UITableView.automaticDimension
     phoneCardTableView.estimatedRowHeight = 80
     phoneCardTableView.dataSource = self
@@ -65,7 +61,7 @@ extension PhoneCardViewController: PhoneCardViewInputProtocol {
       self.viewOutput = newValue
     }
   }
-  
+
   func show(phoneCard: PhonebookObjectProtocol) {
     self.phonecard = phoneCard
     phoneCardTableView.reloadData()
@@ -82,7 +78,7 @@ extension PhoneCardViewController: UITableViewDataSource {
     switch indexPath.row {
       
       // MARK: - PhoneCardNameCell Implementation
-      
+
     case 0:
       guard let cell = tableView.dequeueReusableCell(withIdentifier: kPhoneCardNameCellIdentifier,
                                                      for: indexPath) as? PhoneCardNameCellView else {

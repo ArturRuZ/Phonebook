@@ -11,7 +11,6 @@ import Foundation
 protocol PhoneCardViewOutputProtocol: class {
   func viewDidLoad()
   func personPhotoSelectedWith(url: String)
-  func callButtonPressed()
 }
 
 protocol PhoneCardViewInputProtocol: class {

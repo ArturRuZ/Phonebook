@@ -22,7 +22,6 @@ final class PhonebookViewController: UIViewController {
   private let kPhonebookCellIdentifier = "PhonebookCellReuseIdentifier"
   private var phonebookRecords = [PhonebookObjectProtocol]()
 
-
 // MARK: - BuildIn methods
 
 override func viewDidLoad() {

@@ -14,8 +14,6 @@ final class DetailPhotoInteractor {
   
   weak var interactorOutput: DetailPhotoInteractorOutputProtocol!
   private var currentUrl: String?
-
-  // MARK: - Private methods
 }
 
 // MARK: - DetailPhotoInteractorInputProtocol implementation

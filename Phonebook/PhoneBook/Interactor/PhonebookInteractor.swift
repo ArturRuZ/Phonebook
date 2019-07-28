@@ -16,8 +16,7 @@ final class PhonebookInteractor {
   private let internetService: InternetServiceProtocol
   private let searchService: SearchServiceProtocol
   private var currentPhonebook = [PhonebookObjectProtocol]()
-  
-  
+
   // MARK: - Initialization
   
   init(internetService: InternetServiceProtocol, searchService: SearchServiceProtocol) {
@@ -26,6 +25,7 @@ final class PhonebookInteractor {
   }
   
   // MARK: - Private methods
+
   private func mergeSort(_ array: [PhonebookObjectProtocol]) -> [PhonebookObjectProtocol] {
     guard array.count > 1 else { return array }
     let middleIndex = array.count / 2
@@ -36,31 +36,31 @@ final class PhonebookInteractor {
   private func merge(leftPart: [PhonebookObjectProtocol], rightPart: [PhonebookObjectProtocol]) -> [PhonebookObjectProtocol] {
     var leftIndex = 0
     var rightIndex = 0
-    var orderedPile = [PhonebookObjectProtocol]()
-    orderedPile.reserveCapacity(leftPart.count + rightPart.count)
+    var ordered = [PhonebookObjectProtocol]()
+    ordered.reserveCapacity(leftPart.count + rightPart.count)
     while leftIndex < leftPart.count && rightIndex < rightPart.count {
       if leftPart[leftIndex].firstName < rightPart[rightIndex].firstName {
-        orderedPile.append(leftPart[leftIndex])
+        ordered.append(leftPart[leftIndex])
         leftIndex += 1
       } else if leftPart[leftIndex].firstName > rightPart[rightIndex].firstName {
-        orderedPile.append(rightPart[rightIndex])
+        ordered.append(rightPart[rightIndex])
         rightIndex += 1
       } else {
-        orderedPile.append(leftPart[leftIndex])
+        ordered.append(leftPart[leftIndex])
         leftIndex += 1
-        orderedPile.append(rightPart[rightIndex])
+        ordered.append(rightPart[rightIndex])
         rightIndex += 1
       }
     }
     while leftIndex < leftPart.count {
-      orderedPile.append(leftPart[leftIndex])
+      ordered.append(leftPart[leftIndex])
       leftIndex += 1
     }
     while rightIndex < rightPart.count {
-      orderedPile.append(rightPart[rightIndex])
+      ordered.append(rightPart[rightIndex])
       rightIndex += 1
     }
-    return orderedPile
+    return ordered
   }
   private func createErrorWindow(text: String) -> UIAlertController {
     let alertController = UIAlertController(title: "Error", message: "\(text)", preferredStyle: .alert)

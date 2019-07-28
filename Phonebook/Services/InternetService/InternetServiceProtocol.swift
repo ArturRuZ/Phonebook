@@ -9,5 +9,6 @@
 import Foundation
 
 protocol InternetServiceProtocol: class {
-  func downloadData<T>(fromURL: URL?, parseInto container: T.Type, completion: @escaping (Result<T>) -> Void) where T: Codable
+  func downloadData<T>(fromURL: URL?, parseInto container: T.Type,
+                       completion: @escaping (Result<T>) -> Void) where T: Codable
 }

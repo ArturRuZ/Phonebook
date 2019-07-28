@@ -13,7 +13,7 @@ import UIKit
 let imageCache = NSCache<NSString, AnyObject>()
 
 extension UIImageView {
-  func loadImageUsingCache(withUrl url : String, activityIndicator: UIActivityIndicatorView? = nil) {
+  func loadImageUsingCache(withUrl url: String, activityIndicator: UIActivityIndicatorView? = nil) {
     activityIndicator?.startAnimating()
     guard let urlForDownload = URL(string: url) else { return }
     self.image = nil
@@ -22,7 +22,7 @@ extension UIImageView {
       self.image = cachedImage
       return
     }
-    URLSession.shared.dataTask(with: urlForDownload, completionHandler: { (data, response, error) in
+    URLSession.shared.dataTask(with: urlForDownload, completionHandler: { (data, _ , error) in
       if error != nil {
         print(error!)
         return

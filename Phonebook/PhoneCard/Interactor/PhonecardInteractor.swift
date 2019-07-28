@@ -14,14 +14,6 @@ final class PhoneCardInteractor {
   
   weak var interactorOutput: PhoneCardInteractorOutputProtocol!
   private var currenPhoneCard: PhonebookObjectProtocol?
-  
-  // MARK: - BuildIn methods
-  
-  deinit {
-    print ("PhoneCardInteractor Deinited")
-  }
-
-  // MARK: - Private methods
 }
 
 // MARK: - PhoneCardInteractorInputProtocol implementation

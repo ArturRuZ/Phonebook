@@ -26,10 +26,19 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="epM-S9-YP0">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="TRA-X2-jqJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="nqK-tN-jMy"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="epM-S9-YP0" firstAttribute="centerX" secondItem="sU2-WK-Xcb" secondAttribute="centerX" id="65U-fF-CYq"/>
                             <constraint firstItem="fNi-TX-1aZ" firstAttribute="leading" secondItem="EoG-kI-Vyz" secondAttribute="leading" id="8S4-BO-Nsb"/>
+                            <constraint firstItem="epM-S9-YP0" firstAttribute="centerY" secondItem="sU2-WK-Xcb" secondAttribute="centerY" id="DMU-Rp-0qf"/>
                             <constraint firstItem="EoG-kI-Vyz" firstAttribute="trailing" secondItem="bh8-cQ-zI9" secondAttribute="trailing" id="Grz-wh-qnk"/>
                             <constraint firstItem="fNi-TX-1aZ" firstAttribute="top" secondItem="EoG-kI-Vyz" secondAttribute="top" id="K2b-hT-pPa"/>
                             <constraint firstItem="EoG-kI-Vyz" firstAttribute="bottom" secondItem="bh8-cQ-zI9" secondAttribute="bottom" id="NV4-uO-BZc"/>
@@ -40,6 +49,7 @@
                         <viewLayoutGuide key="safeArea" id="EoG-kI-Vyz"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="epM-S9-YP0" id="cgD-rW-v8T"/>
                         <outlet property="phonebookSearchBar" destination="fNi-TX-1aZ" id="lUE-jj-wxm"/>
                         <outlet property="phonebookTableView" destination="bh8-cQ-zI9" id="TEV-L4-kID"/>
                     </connections>

@@ -14,6 +14,7 @@ final class PhonebookViewController: UIViewController {
   
   @IBOutlet weak var phonebookTableView: UITableView!
   @IBOutlet weak var phonebookSearchBar: UISearchBar!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   // MARK: - Properties
   
@@ -40,6 +41,7 @@ override func viewDidLoad() {
     phonebookTableView.dataSource = self
     phonebookTableView.delegate = self
     phonebookTableView.tableFooterView = UIView(frame: CGRect.zero)
+    activityIndicator.startAnimating()
   }
 }
 
@@ -56,6 +58,7 @@ extension PhonebookViewController: PhonebookViewInputProtocol {
   }
   func show(phonebook: [PhonebookObjectProtocol]) {
     self.phonebookRecords = phonebook
+    activityIndicator.stopAnimating()
     phonebookTableView.reloadData()
   }
   func show(alert: UIAlertController) {
